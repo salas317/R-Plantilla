@@ -1,0 +1,55 @@
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{ragged2e}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{caption}
+\usepackage{multirow}
+\usepackage{bm}
+\usepackage{colortbl}
+%\captionsetup[figure]{labelformat=empty}
+%\captionsetup[table]{labelformat=empty}
+\captionsetup{font=scriptsize}
+%\usepackage[style=apa]{biblatex}
+%\addbibresource{Bibliografia.bib}
+\usetheme{Madrid}
+%\usetheme{Singapore}
+\useinnertheme{rectangles}
+\spanishdecimal{.}
+\definecolor{NC1}{RGB}{64,64,64}
+\definecolor{NC2}{RGB}{96,96,96}
+\definecolor{NC3}{RGB}{128,128,128}
+\definecolor{NC4}{RGB}{160,160,160}
+\setbeamercolor{palette primary}{bg=NC1}
+\setbeamercolor{palette secondary}{bg=NC2}
+\setbeamercolor{palette tertiary}{bg=NC3}
+\setbeamercolor{palette quaternary}{bg=NC4}
+\setbeamercolor{section in toc}{fg=NC1}
+\setbeamercolor{caption name}{fg=NC2}
+\setbeamercolor{item}{fg=NC1}
+\setbeamercolor{block title}{bg=NC1}
+
+\AtBeginSection{
+   \frame{\sectionpage}
+}
+
+\makeatletter
+\setbeamertemplate{section page}
+{
+  \begingroup
+    \centering
+%    {\usebeamerfont{section name}\usebeamercolor[fg]{section name}\sectionname~\insertsectionnumber}
+    \vskip1em\par
+    \begin{beamercolorbox}[sep=12pt,center,colsep=-4bp,rounded=true,shadow=\beamer@themerounded@shadow]{section title}
+      \usebeamerfont{section title}\insertsection\par
+    \end{beamercolorbox}
+  \endgroup
+}
+\makeatother
